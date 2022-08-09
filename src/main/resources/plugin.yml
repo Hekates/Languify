@@ -1,0 +1,4 @@
+name: Languify
+version: '${project.version}'
+main: ch.hekates.languify.Languify
+api-version: 1.18
