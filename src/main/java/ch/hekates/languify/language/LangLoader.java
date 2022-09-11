@@ -9,6 +9,11 @@ import java.util.List;
 import java.util.logging.Logger;
 
 public class LangLoader {
+    /**
+     * This method loads the set language by checking if the file already exists. If not, it clones the file out of the plugin jar file into the language folder.
+     * @param language The language file name without the file ending .json.
+     * @see Languify#setFileDirectory(String)
+     */
     public static void loadLanguage(String language) {
 
         Languify.setLanguage(language);
