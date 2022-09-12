@@ -1,4 +1,5 @@
 <img src="languify.png">
+
 ## Beta 1.0
 ![GitHub Repo stars](https://img.shields.io/github/stars/Hekates/Languify?style=for-the-badge)
 ![GitHub](https://img.shields.io/github/license/Hekates/Languify?style=for-the-badge)
