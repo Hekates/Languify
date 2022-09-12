@@ -21,7 +21,7 @@ A Java library wich brings support for multiple languages to a Spigot plugin.
 
 <h2 name="support">Support</h2>
 
-* Ask anything about the plugin [here](https://github.com/Hekates/OreBan/discussions/2#discussion-3941893).
+* Please ask anything about the plugin [here](https://github.com/Hekates/Languify/discussions/categories/q-a).
 * Always feel free to cantact me on discord: Hekates#2298.
 * Or contact me on twitter: [@Hekates2](https://twitter.com/Hekates2).
 
