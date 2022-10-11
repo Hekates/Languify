@@ -42,11 +42,12 @@ public class Text {
      * @throws IOException
      * @see Languify#setLanguage(String)
      */
-    public static String get(String path) throws IOException {
+    public static String get(String path, String... replacement) throws IOException {
         String language = Languify.getLanguage();
 
         Gson gson = new Gson();
         File file = new File(Languify.getFileDirectory() + "/lang/" + language + ".json");
+
 
         Reader reader = Files.newBufferedReader(file.toPath());
 
@@ -57,8 +58,5 @@ public class Text {
         } else {
             return (String) Languify.getPrefix() + " " + langMap.get(path);
         }
-    }
-
-    public Text() throws IOException {
     }
 }

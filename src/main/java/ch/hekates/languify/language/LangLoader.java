@@ -24,7 +24,6 @@ public class LangLoader {
 
         Logger log = plugin.getLogger();
 
-        List<File> langFiles = new ArrayList<File>();
         File file = new File(path + "/lang/" + language + ".json");
 
         if (file.exists()) {
