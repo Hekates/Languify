@@ -2,12 +2,8 @@ package ch.hekates.languify;
 
 import ch.hekates.languify.language.Text;
 import org.bukkit.plugin.Plugin;
-import org.bukkit.plugin.java.JavaPlugin;
 
-import java.io.IOException;
-import java.util.logging.Logger;
-
-public final class Languify extends JavaPlugin {
+public final class Languify{
 
     private static String language;
     private static Plugin plugin;
