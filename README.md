@@ -117,5 +117,5 @@ public final class Main extends JavaPlugin {
   Main.java <br><img src="https://i.imgur.com/44ar8PF.png" width="600px">
 </ol>
 
-The JavaDocs for this project can be found <a href="https://hekates.github.io/projects/Languify/JavaDocs/Beta-1.1/">here</a>. 
+The JavaDocs for this project can be found <a href="https://hekates.github.io/projects/Languify/JavaDocs/Beta-1.1/" target="_blank">here</a>. 
 If there are any questions left or if something doesn't work, please create an issue.
