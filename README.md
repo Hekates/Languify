@@ -1,6 +1,6 @@
 <img src="languify.png">
 
-## Beta 1.0
+## Beta 1.1
 ![GitHub Repo stars](https://img.shields.io/github/stars/Hekates/Languify?style=for-the-badge)
 ![GitHub](https://img.shields.io/github/license/Hekates/Languify?style=for-the-badge)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Hekates/Languify?style=for-the-badge)
@@ -116,4 +116,6 @@ public final class Main extends JavaPlugin {
   <b>en.json <br><img src="https://i.imgur.com/Fgs5AO7.png" width="600px"><br>
   Main.java <br><img src="https://i.imgur.com/44ar8PF.png" width="600px">
 </ol>
+
+The JavaDocs for this project can be found <a href="https://hekates.github.io/projects/Languify/JavaDocs/Beta-1.1/">here</a>. 
 If there are any questions left or if something doesn't work, please create an issue.
