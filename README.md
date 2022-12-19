@@ -47,7 +47,7 @@ Step 2. Add the dependency
 <dependency>
      <groupId>com.github.Hekates</groupId>
      <artifactId>Languify</artifactId>
-     <version>v1.0-beta</version>
+     <version>v1.1-beta</version>
 </dependency>
 ```
 
@@ -68,7 +68,7 @@ Step 2. Add the dependency
 
 ```groovy
 dependencies {
-    implementation 'com.github.Hekates:Languify:v1.0-beta'
+    implementation 'com.github.Hekates:Languify:v1.1-beta'
 }
 ```
 <h2 name="usage">How to start</h2>
