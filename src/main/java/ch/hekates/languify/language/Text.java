@@ -91,7 +91,7 @@ public class Text {
      * @param replacements A map of keys and replacements to dynamically replace elements of the string.
      * @see Languify#setLanguage(String)
      */
-    public static String get(String path, HashMap<String, ?> replacements) throws IOException {
+    public static String get(String path, HashMap<String, String> replacements) throws IOException {
         String language = Languify.getLanguage();
 
         Gson gson = new Gson();
@@ -110,7 +110,7 @@ public class Text {
 
     private static String fromReplacements(String text, HashMap<String, String> replacements){
         String finalString = text;
-        String[] keys = (String[]) replacements.keySet().toArray();
+        String[] keys = replacements.keySet().toArray(new String[replacements.size()]);
 
         for (String key : keys) {
             finalString = finalString.replaceAll(key, replacements.get(key));
