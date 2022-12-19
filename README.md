@@ -100,7 +100,7 @@ public final class Main extends JavaPlugin {
   <li>Create a folder called "lang" inside your source folder:<br>
   <img src="https://i.imgur.com/rHqW0wH.png" width="450px">
   </li>
-  <li>Create a new file inside the "lang" folder named with the language you specified with the LangLoader#loadLanguage() method and the .json ending for example "en.json". <br>
+  <li>Create a new file inside the "lang" folder named with the language you specified with the <a href="https://hekates.github.io/projects/Languify/JavaDocs/Beta-1.1/ch/hekates/languify/language/LangLoader.html#loadLanguage(java.lang.String)">LangLoader#loadLanguage()</a> method and the .json ending for example "en.json". <br>
   The language.json file must contain following line:
   
   ```json
@@ -111,7 +111,7 @@ public final class Main extends JavaPlugin {
   
   "English" should be replaced with the name of your language.
   </li>
-  <li>To add an new text to your plugin, add the path to the json file followed by the text that should be used instead. To use the newly set text simply use the Text#get() method with your path as an input.<br>
+  <li>To add an new text to your plugin, add the path to the json file followed by the text that should be used instead. To use the newly set text simply use the <a href="https://hekates.github.io/projects/Languify/JavaDocs/Beta-1.1/ch/hekates/languify/language/Text.html#get(java.lang.String,java.lang.Boolean)">Text#get()</a> method with your path as an input.<br>
   Example:
   <b>en.json <br><img src="https://i.imgur.com/Fgs5AO7.png" width="600px"><br>
   Main.java <br><img src="https://i.imgur.com/44ar8PF.png" width="600px">
