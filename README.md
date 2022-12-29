@@ -71,6 +71,10 @@ dependencies {
     implementation 'com.github.Hekates:Languify:v1.1-beta'
 }
 ```
+
+###Old fashioned way
+Of course it is also possible to install the library via downloading and implementing the jar using your IDE.<br>
+The download to the jar binaries can be found  <a href="https://github.com/Hekates/Languify/releases" target="_blank">here</a>.
 <h2 name="usage">How to start</h2>
 <b>After <a href="#implementation">implementing<a> the library you have to do following things:</b>
 <ol>

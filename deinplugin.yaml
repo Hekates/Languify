@@ -1,0 +1,77 @@
+specVersion: 1
+type: lib
+name: Languify
+authors:
+  - Hekates
+download:
+  url: https://github.com/Hekates/Languify#implementation
+  name: Implementation
+supportedGameVersions: ^1.18.2 (getestet)
+category: devTool
+introduction:
+  de: Eine Java Bibliothek, welche es ermötglicht, Spigot Plugins in mehreren Sprachen zu erstellen.
+  en: A Java library wich brings support for multiple languages to a Spigot plugin.
+description: |
+  # How to start
+   **After implementing the library you have to do following things:**
+
+  . Add following code to your Main class:
+
+   ```java
+   package ch.hekates.example;
+   
+   import ch.hekates.languify.Languify;
+   import ch.hekates.languify.language.LangLoader;
+   import org.bukkit.plugin.java.JavaPlugin;
+   
+   public final class Main extends JavaPlugin {
+   
+   @Override
+   public void onEnable() {
+   //Setting up Languify (necessary)
+   String language = "en";
+   Languify.setup(this, this.getDataFolder().toString());
+   LangLoader.loadLanguage(language);
+   }
+  
+
+   ```
+   
+   
+   2. Create a folder called "lang" inside your source folder:<br>
+   <img src="https://i.imgur.com/rHqW0wH.png" width="450px">
+   
+   3. Create a new file inside the "lang" folder named with the language you specified with the <a href="https://hekates.github.io/projects/Languify/JavaDocs/Beta-1.1/ch/hekates/languify/language/LangLoader.html#loadLanguage(java.lang.String)">LangLoader#loadLanguage()</a> method and the .json ending for example "en.json". <br>
+  he language.json file must contain following line:
+   
+   ```json
+   {
+   "language" : "English"
+  
+   ```
+   
+   "English" should be replaced with the name of your language.
+   
+   
+   4. To add a new text to your plugin, add the path to the json file followed by the text that should be used instead. To use the newly set text simply use the <a href="https://hekates.github.io/projects/Languify/JavaDocs/Beta-1.1/ch/hekates/languify/language/Text.html#get(java.lang.String,java.lang.Boolean)">Text#get()</a> method with your path as an input.<br>
+  xample:
+   **en.json
+   <img src="https://i.imgur.com/Fgs5AO7.png" width="600px"><br>
+   Main.java
+   <img src="https://i.imgur.com/44ar8PF.png" width="600px">**
+
+
+installation:
+  de: |
+    Befolge die Anleitung, welche unter dem 'Download' Button zu finden ist.
+  en: |
+    Follow the tutorial wich can be found under the 'Download' button.
+
+tags:
+  - sprache
+  - language
+  - languify
+  - multiple languages
+  - mehrsprachig
+  - library
+icon: https://raw.githubusercontent.com/Hekates/Languify/main/languify.png
