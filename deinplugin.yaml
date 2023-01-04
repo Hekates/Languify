@@ -15,7 +15,7 @@ description: |
   # How to start
    **After implementing the library you have to do following things:**
 
-  . Add following code to your Main class:
+  Add following code to your Main class:
 
    ```java
    package ch.hekates.example;
@@ -26,12 +26,12 @@ description: |
    
    public final class Main extends JavaPlugin {
    
-   @Override
-   public void onEnable() {
-   //Setting up Languify (necessary)
-   String language = "en";
-   Languify.setup(this, this.getDataFolder().toString());
-   LangLoader.loadLanguage(language);
+       @Override
+       public void onEnable() {
+           //Setting up Languify (necessary)
+           String language = "en";
+           Languify.setup(this, this.getDataFolder().toString());
+           LangLoader.loadLanguage(language);
    }
   
 
@@ -42,19 +42,19 @@ description: |
    <img src="https://i.imgur.com/rHqW0wH.png" width="450px">
    
    3. Create a new file inside the "lang" folder named with the language you specified with the <a href="https://hekates.github.io/projects/Languify/JavaDocs/Beta-1.1/ch/hekates/languify/language/LangLoader.html#loadLanguage(java.lang.String)">LangLoader#loadLanguage()</a> method and the .json ending for example "en.json". <br>
-  he language.json file must contain following line:
+  The language.json file must contain following line:
    
    ```json
    {
    "language" : "English"
-  
+   }
    ```
    
    "English" should be replaced with the name of your language.
    
    
    4. To add a new text to your plugin, add the path to the json file followed by the text that should be used instead. To use the newly set text simply use the <a href="https://hekates.github.io/projects/Languify/JavaDocs/Beta-1.1/ch/hekates/languify/language/Text.html#get(java.lang.String,java.lang.Boolean)">Text#get()</a> method with your path as an input.<br>
-  xample:
+  Example:<br>
    **en.json
    <img src="https://i.imgur.com/Fgs5AO7.png" width="600px"><br>
    Main.java
