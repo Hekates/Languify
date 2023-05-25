@@ -19,13 +19,18 @@ public class Text {
      * @param usePrefix If you have set a prefix but don't want to use it for this string set it to false. If you  want to use the set prefix leave this blank or set this to true.
      * @see Languify#setLanguage(String)
      */
-    public static String get(String path, Boolean usePrefix) throws IOException {
+    public static String get(String path, Boolean usePrefix) {
         String language = Languify.getLanguage();
 
         Gson gson = new Gson();
         File file = new File(Languify.getFileDirectory() + "/lang/" + language + ".json");
 
-        Reader reader = Files.newBufferedReader(file.toPath());
+        Reader reader = null;
+        try {
+            reader = Files.newBufferedReader(file.toPath());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
         Map<?, ?> langMap = gson.fromJson(reader, Map.class);
 
@@ -45,13 +50,18 @@ public class Text {
      * @param usePrefix If you have set a prefix but don't want to use it for this string set it to false. If you  want to use the set prefix leave this blank or set this to true.
      * @see Languify#setLanguage(String)
      */
-    public static String get(String path,HashMap<String, String> replacements, Boolean usePrefix) throws IOException {
+    public static String get(String path,HashMap<String, String> replacements, Boolean usePrefix) {
         String language = Languify.getLanguage();
 
         Gson gson = new Gson();
         File file = new File(Languify.getFileDirectory() + "/lang/" + language + ".json");
 
-        Reader reader = Files.newBufferedReader(file.toPath());
+        Reader reader = null;
+        try {
+            reader = Files.newBufferedReader(file.toPath());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
         Map<?, ?> langMap = gson.fromJson(reader, Map.class);
 
@@ -67,13 +77,18 @@ public class Text {
      * @param path The path to the requested string in the language.json file. Example: "command.error.no_player"
      * @see Languify#setLanguage(String)
      */
-    public static String get(String path) throws IOException {
+    public static String get(String path){
         String language = Languify.getLanguage();
 
         Gson gson = new Gson();
         File file = new File(Languify.getFileDirectory() + "/lang/" + language + ".json");
 
-        Reader reader = Files.newBufferedReader(file.toPath());
+        Reader reader = null;
+        try {
+            reader = Files.newBufferedReader(file.toPath());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
         Map<?, ?> langMap = gson.fromJson(reader, Map.class);
 
@@ -91,13 +106,18 @@ public class Text {
      * @param replacements A map of keys and replacements to dynamically replace elements of the string.
      * @see Languify#setLanguage(String)
      */
-    public static String get(String path, HashMap<String, String> replacements) throws IOException {
+    public static String get(String path, HashMap<String, String> replacements) {
         String language = Languify.getLanguage();
 
         Gson gson = new Gson();
         File file = new File(Languify.getFileDirectory() + "/lang/" + language + ".json");
 
-        Reader reader = Files.newBufferedReader(file.toPath());
+        Reader reader = null;
+        try {
+            reader = Files.newBufferedReader(file.toPath());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
         Map<?, ?> langMap = gson.fromJson(reader, Map.class);
 
