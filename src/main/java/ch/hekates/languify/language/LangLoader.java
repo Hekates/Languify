@@ -28,16 +28,16 @@ public class LangLoader {
 
         if (file.exists()) {
             log.info("The specified language file is located in the right directory... proceeding.");
+            plugin.saveResource("lang\\" + language + ".json", true);
             for (File language_file : plugin.getDataFolder().listFiles()){
                 plugin.saveResource(language_file.getName(), true);
             }
-            plugin.saveResource("lang\\" + language + ".json", true);
         } else {
             log.warning("The specified language file is not located in the right directory... generating a new one.");
+            plugin.saveResource("lang\\" + language + ".json", true);
             for (File language_file : plugin.getDataFolder().listFiles()){
                 plugin.saveResource(language_file.getName(), true);
             }
-            plugin.saveResource("lang\\" + language + ".json", true);
         }
     }
 }
