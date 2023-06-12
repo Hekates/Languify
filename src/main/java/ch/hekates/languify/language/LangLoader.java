@@ -4,8 +4,7 @@ import ch.hekates.languify.Languify;
 import org.bukkit.plugin.Plugin;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 import java.util.logging.Logger;
 
 public class LangLoader {
@@ -29,15 +28,9 @@ public class LangLoader {
         if (file.exists()) {
             log.info("The specified language file is located in the right directory... proceeding.");
             plugin.saveResource("lang\\" + language + ".json", true);
-            for (File languageFile : plugin.getDataFolder().listFiles()) {
-                plugin.saveResource("lang/" + languageFile.getName(), true);
-            }
         } else {
             log.warning("The specified language file is not located in the right directory... generating a new one.");
             plugin.saveResource("lang\\" + language + ".json", true);
-            for (File languageFile : plugin.getDataFolder().listFiles()) {
-                plugin.saveResource("lang/" + languageFile.getName(), true);
-            }
         }
     }
 }
