@@ -1,6 +1,7 @@
 package ch.hekates.languify.language;
 
 import ch.hekates.languify.Languify;
+import com.sun.tools.javac.Main;
 import org.bukkit.plugin.Plugin;
 
 import java.io.File;
@@ -14,23 +15,19 @@ public class LangLoader {
      * @see Languify#setFileDirectory(String)
      */
     public static void loadLanguage(String language) {
-
         Languify.setLanguage(language);
+    }
 
+    public static void saveLanguages(){
         Plugin plugin = Languify.getPlugin();
 
-        String path = Languify.getFileDirectory();
+        File langFolder = new File(plugin.getDataFolder(), "lang");
+        File[] files = langFolder.listFiles();
 
-        Logger log = plugin.getLogger();
-
-        File file = new File(path + "/lang/" + language + ".json");
-
-        if (file.exists()) {
-            log.info("The specified language file is located in the right directory... proceeding.");
-            plugin.saveResource("lang\\" + language + ".json", true);
-        } else {
-            log.warning("The specified language file is not located in the right directory... generating a new one.");
-            plugin.saveResource("lang\\" + language + ".json", true);
+        for (File file : files) {
+            if (file.isFile()) {
+                plugin.saveResource("lang/" + file.getName(), true);
+            }
         }
     }
 }
