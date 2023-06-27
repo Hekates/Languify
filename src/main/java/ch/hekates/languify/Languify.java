@@ -4,7 +4,6 @@ import ch.hekates.languify.language.Text;
 import org.bukkit.plugin.Plugin;
 
 public final class Languify{
-
     private static String language;
     private static Plugin plugin;
     private static String fileDirectory;
