@@ -2,28 +2,55 @@ package ch.hekates.languify;
 
 import ch.hekates.languify.language.Text;
 import org.bukkit.plugin.Plugin;
+import ch.hekates.languify.language.LangLoader;
 
-public final class Languify{
+public final class Languify {
     private static String language;
     private static Plugin plugin;
     private static String fileDirectory;
     private static String prefix;
+    private static boolean overWriteFiles;
+
+    /**
+     * @return If the language files get overwritten.
+     * @see LangLoader#saveLanguages(String)
+     */
+    public static boolean getOverWriteFiles() {
+        return overWriteFiles;
+    }
+
+    /**
+     * Sets if the language files should be overwritten anytime they get saved.
+     * If set to false, users of the plugin can change the contents of the language files.
+     *
+     * @param overWriteFiles Should the language files be overwritten every time the language files get saved?
+     * @see LangLoader#saveLanguages(String)
+     */
+    public static void setOverWriteFiles(boolean overWriteFiles) {
+        Languify.overWriteFiles = overWriteFiles;
+    }
+
 
     /**
      * @return (if set) the prefix passed with the setup() or the setPrefix() method.
      * @see Languify#setup(Plugin, String, String)
      * @see Languify#setPrefix(String)
      */
-    public static String getPrefix() { return prefix; }
+    public static String getPrefix() {
+        return prefix;
+    }
 
     /**
      * Sets the prefix used by the plugin using Languify. The prefix gets added at the start of any text which is output by Languify. The prefix can be deactivated manually with each text request. It can also be optionally set in the setup method.
+     *
      * @param prefix The prefix of the plugin using the Languify library.
      * @see Languify#setup(Plugin, String, String)
      * @see Languify#getPrefix()
      * @see Text#get(String, Boolean)
      */
-    public static void setPrefix(String prefix) { Languify.prefix = prefix; }
+    public static void setPrefix(String prefix) {
+        Languify.prefix = prefix;
+    }
 
     /**
      * @return The language abbreviation passed in by the Languify#setLanguage() method.
@@ -35,6 +62,7 @@ public final class Languify{
 
     /**
      * Sets the language file name where texts will be taken from. For example: The language of the language file is German, but the name of the language file is de, so "de" is passed in.
+     *
      * @param language The language file name without the file ending .json.
      * @see Languify#getLanguage()
      */
@@ -54,6 +82,7 @@ public final class Languify{
 
     /**
      * Sets the plugin instance which will be used by Languify to run tasks like logging. This is already done if the setup method got called.
+     *
      * @param plugin The plugin instance of the plugin using the Languify library.
      * @see Languify#getPlugin()
      * @see Languify#setup(Plugin, String, String)
@@ -74,6 +103,7 @@ public final class Languify{
 
     /**
      * Sets the filedirectory where the language-files should be stored. In this diretory a folder will be created in which te language files are stored. I would recommend using the plugin root-directory. This is already done if the setup method got called.
+     *
      * @param fileDirectory The file directory where the language folder should be generated.
      */
     public static void setFileDirectory(String fileDirectory) {
@@ -85,25 +115,30 @@ public final class Languify{
      * Sets up the Languify library by setting importnt variables
      * such as the plugin instance and the filedirectroy.
      * A prefix can be set optionally.
-     * @param plugin The instance of the plugin using the Languify library.
+     *
+     * @param plugin    The instance of the plugin using the Languify library.
      * @param directory The filedirectory where the language-files should be stored. In this diretory a folder will be created in which te language files are stored. I would recommend using the plugin root-directory.
-     * */
+     */
     public static void setup(Plugin plugin, String directory) {
         Languify.setPlugin(plugin);
         Languify.setFileDirectory(directory);
+        Languify.setOverWriteFiles(true);
     }
+
 
     /**
      * Sets up the Languify library by setting importnt variables
      * such as the plugin instance and the filedirectroy.
      * A prefix can be set optionally.
-     * @param plugin The instance of the plugin using the Languify library.
+     *
+     * @param plugin    The instance of the plugin using the Languify library.
      * @param directory The filedirectory where the language-files should be stored. In this diretory a folder will be created in which te language files are stored. I would recommend using the plugin root-directory.
-     * @param prefix The prefix used by the plugin using Languify. The prefix gets added at the start of any text which is output by Languify. The prefix can be deactivated manually with each text request.
+     * @param prefix    The prefix used by the plugin using Languify. The prefix gets added at the start of any text which is output by Languify. The prefix can be deactivated manually with each text request.
      */
-    public static void setup(Plugin plugin, String directory, String prefix){
+    public static void setup(Plugin plugin, String directory, String prefix) {
         Languify.setPlugin(plugin);
         Languify.setFileDirectory(directory);
         Languify.setPrefix(prefix);
+        Languify.setOverWriteFiles(true);
     }
 }
