@@ -5,7 +5,7 @@
 ![GitHub](https://img.shields.io/github/license/Hekates/Languify?style=for-the-badge)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Hekates/Languify?style=for-the-badge)
 ![Minecraft version](https://img.shields.io/badge/Minecraft-1.18.2+-brightgreen?style=for-the-badge)
-![Maintenance](https://img.shields.io/maintenance/yes/2022?style=for-the-badge)
+![Maintenance](https://img.shields.io/maintenance/yes/2023?style=for-the-badge)
 
 A Java library wich brings support for multiple languages to a Spigot plugin.
 
